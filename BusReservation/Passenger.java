@@ -12,15 +12,16 @@ int age;
 int busNo;
 
 public Passenger() {
-	Scanner s = new Scanner(System.in);
-	System.out.println("enter passanger name:");
-	name = s.next();
+	Scanner scanner = new Scanner(System.in);
+	System.out.println("Enter passanger name:");
+	name = scanner.nextLine();
 	System.out.println("enter age:");
-	age = s.nextInt();
-	System.out.println("enter busNo:");
-	busNo = s.nextInt();
-	System.out.println("enter date format:dd-mm-yyyy");
-	String dateInput = s.next();
+	age = scanner.nextInt();
+	System.out.println("Enter busNo from above:");
+	busNo = scanner.nextInt();
+	System.out.println("Enter date in format:dd-mm-yyyy");
+	String dateInput = scanner.next();
+	//date format
 	SimpleDateFormat dates = new SimpleDateFormat("dd-MM-yyyy");
 	try {
 		dates.parse(dateInput);
