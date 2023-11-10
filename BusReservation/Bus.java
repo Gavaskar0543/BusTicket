@@ -28,8 +28,5 @@ public void setBusNo(int busNo) {
 public void setCapacity(int capacity) {
 	this.capacity = capacity;
 }
-//display
-public void displayBusInfo() {
-	System.out.println("BusNo:"+busNo+" "+"Ac Available:"+ac+" "+"Capacity:"+capacity);
-}
+
 }
