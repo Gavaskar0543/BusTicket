@@ -23,4 +23,14 @@ Statement st = con.createStatement();
 	 System.out.println("--------------------------------------------------");
  }
 }
+
+public int getCapacity(int busNo) throws SQLException {
+	Connection con =	Dbconnection.getConnection();
+	String query = "select capacity from Bus where busNo ="+busNo;
+	Statement st = con.createStatement();
+	 ResultSet rs =  st.executeQuery(query);
+	 rs.next();
+	 return rs.getInt(1);
+	
+}
 }
